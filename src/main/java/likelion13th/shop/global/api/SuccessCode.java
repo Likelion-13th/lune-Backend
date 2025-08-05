@@ -23,10 +23,12 @@ public enum SuccessCode implements BaseCode { // 성공
     USER_INFO_GET_SUCCESS(HttpStatus.OK, "USER_203", "사용자 정보 조회에 성공했습니다."),
     USER_MILEAGE_GET_SUCCESS(HttpStatus.OK, "USER_204", "사용자 마일리지 조회에 성공했습니다."),
     USER_ORDERS_STATUS_SUCCESS(HttpStatus.OK, "USER_205", "주문 목록 조회에 성공했습니다."),
+    USER_ADDRESS_GET_SUCCESS(HttpStatus.OK, "USER_206", "사용자 주소 조회에 성공했습니다."),
 
     // Category
     CATEGORY_ITEMS_GET_SUCCESS(HttpStatus.OK, "CATEGORY_2001", "카테고리 상품 조회 성공"),
     CATEGORY_ITEMS_EMPTY(HttpStatus.OK, "CATEGORY_204", "해당 카테고리에 등록된 상품이 없습니다."),
+    CATEGORY_DELETE_SUCCESS(HttpStatus.OK, "CATEGORY_2002", "카테고리 삭제 성공"),
 
     // Item
     ITEM_GET_SUCCESS(HttpStatus.OK, "ITEM_2003", "상품 조회에 성공했습니다."),
@@ -34,6 +36,7 @@ public enum SuccessCode implements BaseCode { // 성공
     // Order
     ORDER_CREATE_SUCCESS(HttpStatus.CREATED, "ORDER_201", "주문이 성공적으로 생성되었습니다."),
     ORDER_GET_SUCCESS(HttpStatus.OK, "ORDER_2001", "주문 조회에 성공했습니다."),
+    ORDER_LIST_EMPTY(HttpStatus.OK, "ORDER_2000", "주문 목록이 비어 있습니다."),
     ORDER_LIST_SUCCESS(HttpStatus.OK, "ORDER_2002", "모든 주문 목록 조회에 성공했습니다."),
     ORDER_CANCEL_SUCCESS(HttpStatus.OK, "ORDER_2003", "주문이 성공적으로 취소되었습니다."),
 
