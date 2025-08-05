@@ -34,6 +34,7 @@ public enum ErrorCode implements BaseCode { // 실패
 
     // Category
     CATEGORY_NOT_FOUND(HttpStatus.NOT_FOUND, "CATEGORY_4041", "해당 카테고리를 찾을 수 없습니다."),
+    CATEGORY_ALREADY_EXISTS(HttpStatus.BAD_REQUEST, "CATEGORY_4001", "이미 존재하는 카테고리입니다."),
 
     // Item
     ITEM_NOT_FOUND(HttpStatus.NOT_FOUND, "ITEM_4041", "해당 상품을 찾을 수 없습니다."),

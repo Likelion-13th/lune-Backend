@@ -22,3 +22,5 @@ public class RefreshToken {
     @JoinColumn(name = "user_id")
     private User user;
 }
+
+// 관련 오류가 나서 가장 기본적인 구조로 작성함.

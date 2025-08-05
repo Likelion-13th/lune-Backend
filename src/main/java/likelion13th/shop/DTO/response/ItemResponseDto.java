@@ -21,3 +21,8 @@ public class ItemResponseDto {
         );
     }
 }
+
+// 상품 정보를 반환하기 위힌 DTO
+// 상품의 고유 ID, 이름, 가격을 포함하고 있음.
+// 추가적으로 상품 설명(description)과 재고 수량(stockQuantity)을 포함할 수 있음.
+// 현재는 주석 처리되어 있음.

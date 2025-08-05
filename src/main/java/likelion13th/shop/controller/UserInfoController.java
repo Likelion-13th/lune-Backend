@@ -57,3 +57,7 @@ public class UserInfoController {
         return ResponseEntity.ok(ApiResponse.onSuccess(SuccessCode.USER_ADDRESS_GET_SUCCESS, responseDto));
     }
 }
+
+// 사용자 관련 정보(이름, 주소, 보유 마일리지) 조회 기능을 제공함.
+//@Operation 어노테이션을 사용하여 Swagger 문서화
+//일관된 응답 포맷 + jwt 연동이 아직 안되어 임시 로그인 아이디를 추가함.

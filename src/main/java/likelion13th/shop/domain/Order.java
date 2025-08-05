@@ -14,7 +14,7 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Order extends BaseEntity {
 
-    /** 필드 **/
+    // 필드
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
@@ -36,7 +36,8 @@ public class Order extends BaseEntity {
     @Column(nullable = false)
     private OrderStatus status;
 
-    /** 연관관계 설정 **/
+    // 연관관계 설정
+
     // Item와의 관계 N:1
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "item_id")
@@ -47,7 +48,8 @@ public class Order extends BaseEntity {
     @JoinColumn(name = "user_id")
     private User user;
 
-    /** 생성자 및 비즈니스 로직 등등..**/
+    // 생성자 및 비즈니스 로직 등
+
     // 내부 생성자 메서드
     private Order(User user, Item item, int quantity) {
         this.user = user;

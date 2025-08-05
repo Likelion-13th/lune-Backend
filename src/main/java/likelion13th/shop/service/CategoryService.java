@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -20,14 +18,16 @@ public class CategoryService {
     //모든 카테고리 조회
     @Transactional
     public List<Category> getAllCategories() {
-        return categoryRepository.findAll()
-                .stream()
-                .collect(Collectors.toList());
+        return categoryRepository.findAll();
     }
 
     //카테고리 생성
     @Transactional
     public Category createCategory(String name) {
+        if(categoryRepository.existsByName(name)){
+            throw new GeneralException(ErrorCode.CATEGORY_ALREADY_EXISTS);
+        }
+
         Category category = new Category(name);
         return categoryRepository.save(category);
     }
@@ -56,3 +56,6 @@ public class CategoryService {
         categoryRepository.delete(category);
     }
 }
+
+// 비즈니스 로직을 처리하는 클래스
+// 조회, 생성, 수정, 삭제 기능 구현과 예외처리를 일관성 있게함.

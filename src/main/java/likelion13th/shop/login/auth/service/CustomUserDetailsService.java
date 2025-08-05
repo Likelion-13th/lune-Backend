@@ -33,3 +33,5 @@ public class CustomUserDetailsService implements UserDetailsService {
         return new CustomUserDetails(user);
     }
 }
+
+// 사용자가 로그인 시, 사용자 정보를 찾기 위함.

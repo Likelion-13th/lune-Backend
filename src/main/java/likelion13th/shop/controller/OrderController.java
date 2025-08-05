@@ -25,7 +25,7 @@ import java.util.List;
 public class OrderController {
     private final OrderService orderService;
 
-    /** 주문 생성 **/
+    // 주문 생성
     @PostMapping
     @Operation(summary = "주문 생성", description = "로그인한 사용자의 주문을 생성합니다.")
     public ApiResponse<?> createOrder(
@@ -39,7 +39,7 @@ public class OrderController {
 
 
 
-    /** 모든 주문 목록 조회 **/
+    // 모든 주문 목록 조회
     @GetMapping
     @Operation(summary = "모든 주문 조회", description = "로그인한 사용자의 모든 주문을 목록으로 조회합니다.")
     public ApiResponse<?> getAllOrders(
@@ -53,7 +53,7 @@ public class OrderController {
         return ApiResponse.onSuccess(SuccessCode.ORDER_LIST_SUCCESS, orders);
     }
 
-    /** 주문 취소 **/
+    // 주문 취소
     @PutMapping("/{orderId}/cancel")
     @Operation(summary = "주문 취소", description = "로그인한 사용자의 주문을 취소합니다.")
     public ApiResponse<?> cancelOrder(@PathVariable Long orderId) {

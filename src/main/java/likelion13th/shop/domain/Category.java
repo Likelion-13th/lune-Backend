@@ -36,3 +36,7 @@ public class Category extends BaseEntity {
         this.name = name;
     }
 }
+
+// 상품 분류를 위한 카테고리 엔티티
+// 테이블 이름은 예약어와 겹치지 않게 "categories"로 설정
+// BaseEntity를 상속받음.

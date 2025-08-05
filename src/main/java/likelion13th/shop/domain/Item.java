@@ -29,6 +29,10 @@ public class Item {
     @Column(nullable = false)
     private String name;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
+
 //    // 양방향 연관관계 편의 메서드
 //    public void addOrder(Order order) {
 //        orders.add(order);

@@ -10,3 +10,5 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     // 카테고리 이름 중복 확인용
     boolean existsByName(String name);
 }
+
+// 카테고리 이름의 중복 여부를 확인하기 위함.

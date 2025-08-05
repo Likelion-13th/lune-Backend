@@ -37,7 +37,10 @@ public class UserAddressService {
                 addressRequest.getAddressDetail()
         );
 
-        user.setAddress(newAddress);
+        user.updateAddress(newAddress);
         return AddressResponseDto.from(user.getAddress());
     }
 }
+
+// 사용자 주소 조회 및 수정 기능을 제공하는 클래스
+// 사용자의 인증된 정보를 기반으로 해당하는 사용자의 주소를 조회 및 수정할 수 있음.

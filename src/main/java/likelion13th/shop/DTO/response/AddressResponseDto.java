@@ -19,3 +19,6 @@ public class AddressResponseDto {
         );
     }
 }
+
+// 사용자의 주소 정보를 반환하기 위한 응답 DTO
+// 어노테이션을 사용해 생성자와 getter 메서드를 자동으로 생성함.

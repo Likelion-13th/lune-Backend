@@ -12,7 +12,7 @@ import java.util.Collections;
 public class CustomUserDetails implements UserDetails {
 
     private final Long userId;        // 실제 DB상의 ID
-    private final String providerId;  // 카카오에서 온 식별자
+    private final String providerId;  // 식별자
 
     private final User user;
 
@@ -20,19 +20,6 @@ public class CustomUserDetails implements UserDetails {
         this.userId = user.getId();
         this.providerId = user.getProviderId();
         this.user = user;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    // ✅ 사용자 식별자 반환
-    public String getProviderId() {
-        return providerId;
-    }
-
-    public Long getUserId() {
-        return userId;
     }
 
     // ✅ 권한은 필요시 수정
@@ -73,3 +60,5 @@ public class CustomUserDetails implements UserDetails {
         return true;
     }
 }
+
+// 사용자 인증 정보 클래스인데, gpt 도움을 받아서 작성함.
